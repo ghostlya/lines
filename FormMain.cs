@@ -152,6 +152,7 @@ namespace linesk
 
 
             y = 60 + toolStrip1.Height;
+            
             for (int i = 0; i < GameSet.DRH.Length; i++)
             {
                 if (GameSet.DRH[i].CurrentPlayer == true)
@@ -162,7 +163,7 @@ namespace linesk
             }
 
 
-            g.DrawString("Рекордсмены:", font, new SolidBrush(Color.White), x, y + 20);
+            g.DrawString("Таблица лидеров:", font, new SolidBrush(Color.White), x, y + 40);
 
             y += 80;
             for (int i = 0; i < GameSet.DRH.Length - 0; i++)
@@ -901,7 +902,7 @@ namespace linesk
             FileStream fileStream = null;
             try
             {
-                string filePath = Application.StartupPath + "\\settings.lin";
+                string filePath = Application.StartupPath + "\\settings.set";
 
                 FileInfo fi = new FileInfo(filePath);
                 if (fi.Exists == false)
